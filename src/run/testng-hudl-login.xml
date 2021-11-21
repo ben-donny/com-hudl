@@ -5,8 +5,8 @@
     <test name="Hudl login running on chrome browser">
         <parameter name="BROWSER" value="chrome"/>
         <parameter name="SITEURL" value="https://www.hudl.com/login"/>
-        <parameter name="userName" value="bidonije@gmail.com"/>
-        <parameter name="password" value="Hudl.com12345]"/>
+        <parameter name="userName" value="someusername"/>
+        <parameter name="password" value="somepassword"/>
         <classes>
           <class name="com.hudl.login.LoginTest" />
           <class name="com.hudl.login.PaswordResetTest" />
