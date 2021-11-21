@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Login Test suite" verbose="1" parallel="false">
+
+    <test name="Hudl login running on chrome browser">
+        <parameter name="BROWSER" value="chrome"/>
+        <parameter name="SITEURL" value="https://www.hudl.com/login"/>
+        <parameter name="userName" value="bidonije@gmail.com"/>
+        <parameter name="password" value="Hudl.com12345]"/>
+        <classes>
+          <class name="com.hudl.login.LoginTest" />
+          <class name="com.hudl.login.PaswordResetTest" />
+        </classes>
+    </test>
+
+      <test name="Hudl login running on firefox browser">
+            <parameter name="BROWSER" value="firefox"/>
+            <parameter name="SITEURL" value="https://www.hudl.com/login"/>
+            <parameter name="userName" value="bidonije@gmail.com"/>
+            <parameter name="password" value="Hudl.com12345]"/>
+            <classes>
+                <class name="com.hudl.login.LoginTest" />
+                <class name="com.hudl.login.PaswordResetTest" />
+            </classes>
+      </test>
+
+    </suite>
