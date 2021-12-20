@@ -5,8 +5,8 @@
     <test name="Hudl login running on chrome browser">
         <parameter name="BROWSER" value="chrome"/>
         <parameter name="SITEURL" value="https://www.hudl.com/login"/>
-        <parameter name="userName" value="someusername"/>
-        <parameter name="password" value="somepassword"/>
+        <parameter name="userName" value="bidonije@googlemail.com"/>
+        <parameter name="password" value="Brexit12345]"/>
         <classes>
           <class name="com.hudl.login.LoginTest" />
           <class name="com.hudl.login.PaswordResetTest" />
@@ -16,7 +16,7 @@
       <test name="Hudl login running on firefox browser">
             <parameter name="BROWSER" value="firefox"/>
             <parameter name="SITEURL" value="https://www.hudl.com/login"/>
-            <parameter name="userName" value="bidonije@gmail.com"/>
+            <parameter name="userName" value="bidonije@googlemail.com"/>
             <parameter name="password" value="Hudl.com12345]"/>
             <classes>
                 <class name="com.hudl.login.LoginTest" />

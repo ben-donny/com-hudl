@@ -1,4 +1,29 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 79.086 s - in TestSuite
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 73.177 s <<< FAILURE! - in TestSuite
+loginWithValidCredentials(com.hudl.login.LoginTest)  Time elapsed: 4.326 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"div.hui-globaluseritem > div.hui-globaluseritem__display-name > span"}
+  (Session info: chrome=96.0.4664.55)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'C02XD5ANJG5J', ip: '192.168.0.39', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [59a40722bf32695efc12458840d6b0ed, findElement {using=css selector, value=div.hui-globaluseritem > div.hui-globaluseritem__display-name > span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.55, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: /var/folders/4s/9sq7v_0n75l...}, goog:chromeOptions: {debuggerAddress: localhost:58392}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58392/devtoo..., se:cdpVersion: 96.0.4664.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 59a40722bf32695efc12458840d6b0ed
+	at com.hudl.login.LoginTest.loginWithValidCredentials(LoginTest.java:29)
+
+loginWithValidCredentials(com.hudl.login.LoginTest)  Time elapsed: 4.334 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: div.hui-globaluseritem > div.hui-globaluseritem__display-name > span
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'C02XD5ANJG5J', ip: '192.168.0.39', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [bf143e08-601a-124f-be3c-0ea9c8104134, findElement {using=css selector, value=div.hui-globaluseritem > div.hui-globaluseritem__display-name > span}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211119140621, moz:debuggerAddress: localhost:65024, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 29518, moz:profile: /var/folders/4s/9sq7v_0n75l..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.6.0, proxy: Proxy(), se:cdp: ws://localhost:65024/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bf143e08-601a-124f-be3c-0ea9c8104134
+	at com.hudl.login.LoginTest.loginWithValidCredentials(LoginTest.java:29)
+
