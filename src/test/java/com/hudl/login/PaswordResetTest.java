@@ -9,12 +9,14 @@ public class PaswordResetTest extends BasePage {
     public static final String INVALIDEMAIL = "invalidemail@mailinator.com";
     public static final String RESET_PASSWORD_CONFIRMATION_TEXT = "Click the link in the email to reset your password.";
     public static final String THAT_EMAIL_ADDRESS_DOESN_T_EXIST_IN_HUDL = "That email address doesn't exist in Hudl.";
+    LoginSteps loginSteps;
 
 
     @BeforeClass
     @Parameters({"BROWSER", "SITEURL"})
     public void setUp(String BROWSER, String SITEURL ) throws Exception{
         createDriver(BROWSER, SITEURL);
+        loginSteps = new LoginSteps(new LoginPage());
     }
 
     /**
@@ -31,7 +33,6 @@ public class PaswordResetTest extends BasePage {
 
     @Test
     public void doPasswordResetWithInvalidEmail() throws Exception{
-        LoginSteps loginSteps = new LoginSteps(new LoginPage());
         loginSteps.doPassordReset(INVALIDEMAIL);
         loginSteps.assertErrorMessageForInvalidEmailForPasswordReset(THAT_EMAIL_ADDRESS_DOESN_T_EXIST_IN_HUDL);
     }

@@ -26,7 +26,6 @@ public class LoginTest extends BasePage {
     @Parameters({"userName", "password"})
     public void loginWithValidCredentials(String userName, String password) throws Exception{
 
-        //LoginSteps loginSteps = new LoginSteps(new LoginPage());
         loginSteps.doLogin(userName, password);
         loginSteps.assertCoachHeaderText(LOGIN_ACCOUNT_ICON_TEXT);
         loginSteps.assertQAHiringProjectText(QA_HIRE_PROJECT_TEXT);
@@ -37,7 +36,6 @@ public class LoginTest extends BasePage {
     @Test
     public void loginWithEmailAndPasswordFieldBlank() throws Exception{
 
-       // LoginSteps loginSteps = new LoginSteps(new LoginPage());
         loginSteps.doLogin("", "");
         loginSteps.assertinvalidEmailAndPasswordErrorText(EMAIL_AND_OR_PASSWORD_NEED_HELP_TEXT);
     }
@@ -46,7 +44,7 @@ public class LoginTest extends BasePage {
     @Parameters({"userName"})
     public void loginWithInValidPassword(String userName) throws Exception{
 
-       // LoginSteps loginSteps = new LoginSteps(new LoginPage());
+
         loginSteps.doLogin(userName, INVALID_PASSWORD);
         loginSteps.assertinvalidEmailAndPasswordErrorText(EMAIL_AND_OR_PASSWORD_NEED_HELP_TEXT);
     }
@@ -55,7 +53,6 @@ public class LoginTest extends BasePage {
     @Parameters({"password"})
     public void loginWithInValidEmail(String password) throws Exception{
 
-        //LoginSteps loginSteps = new LoginSteps(new LoginPage());
         loginSteps.doLogin(INVALIDEMAIL, password);
         loginSteps.assertinvalidEmailAndPasswordErrorText(EMAIL_AND_OR_PASSWORD_NEED_HELP_TEXT);
     }
